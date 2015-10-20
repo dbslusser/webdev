@@ -1,0 +1,119 @@
+<!-- 
+DESCRIPTION: collection of reusable bootstrap modals
+AUTHOR: David Slusser
+VERSION: 0.0.1
+-->
+
+<!-- COMMON MODALS -->
+
+<!-- MODAL: confirmation -->
+<div id="id_modalConfirmationWrapper">
+	<div class="modal fade" id="id_modalConfirm" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-md">
+			<div class="modal-content">
+				<div class="modal-header">
+	   				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	   				<h4 class="modal-title" id="id_modalConfirmHeader"></h4>
+		   		</div>
+				<div class="modal-body" id="id_modalConfirmBody"></div>
+				<div class="modal-footer" id="id_modalConfirmFooter">
+					<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+					<a class="btn btn-primary" id="id_modalConfirm_OK"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- MODAL: confirmation-large -->
+<div id="id_modalConfirmationLargeWrapper">
+	<div class="modal fade" id="id_modalConfirmLarge" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+	   				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	   				<h4 class="modal-title" id="id_modalConfirmLargeHeader"></h4>
+		   		</div>
+				<div class="modal-body" id="id_modalConfirmLargeBody"></div>
+				<div class="modal-footer" id="id_modalConfirmLargeFooter">
+					<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+					<a class="btn btn-primary" id="id_modalConfirmLarge_OK"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- MODAL: results -->
+<div class="modal fade" id="id_results_modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-md">
+	<div class="modal-content">
+		<div class="modal-header">
+   			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+   			<h4 class="modal-title" id="id_results_modal_title"></h4>
+   		</div>
+   		<div class="modal-body-scroll" id="id_results_modal_body"></div> 
+      	<div class="modal-footer">
+        	<button id="id_results_modal_OK" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      	</div>      	
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: results-large -->
+<div class="modal fade" id="id_results_modal_large" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+	<div class="modal-content">
+		<div class="modal-header">
+   			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+   			<h4 class="modal-title" id="id_results_modal_large_title"></h4>
+   		</div>
+   		<div class="modal-body-scroll" id="id_results_modal_large_body"></div> 
+      	<div class="modal-footer">
+        	<button id="id_results_modal_large_OK" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      	</div>      	
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL: login -->
+<div class="modal fade" id="modal_login" tabindex="-1" role="dialog" aria-labelledby="modal_install_label" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        	<h4 class="modal-title" id="modal_login_label"><b>Login Required</b></h4>
+			</div>
+			<form method="post">
+				{% csrf_token %}
+				<div class="modal-body">
+					<div class="container form-signin">
+						{% if errors %}
+						<div class="alert alert-danger alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<span class="glyphicon glyphicon-exclamation-sign"></span> <strong>Username or Password Invalid</strong>
+						</div>
+						{% endif %}				  
+	
+							<h5 class="form-signin-heading" id="id_modal_login_credential_label"><h5>
+							<input id="id_modal_login_username" maxlength="254" name="username" type="text" class="form-control" placeholder="Username" autofocus/>
+							<input id="id_modal_login_password" name="password" type="password" class="form-control" placeholder="Password" />       
+							<!-- <input class="btn btn btn-primary btn-block form-signin-button" id="button_device_login" data-toggle="modal" onclick="formSubmit();" value="Login & push config" /> -->
+						
+					</div> <!-- /container -->
+				</div>
+		      	<div class="modal-footer">
+		        	<button id="id_login_modal_OK" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        	<!-- <a class="btn btn-primary" id="id_modal_login_OK" onclick="formSubmit();"></a>  -->
+		        	<a class="btn btn-primary" id="id_modal_login_OK"></a>
+		      	</div> 
+	      	</form>			
+		</div>
+	</div>
+</div>	
+
+
+
+
