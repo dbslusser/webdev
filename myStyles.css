@@ -1,0 +1,358 @@
+/*
+ * DESCRIPTION: custom css; extension of stock bootstrap styles
+ * AUTHOR: 		David Slusser
+ * REVISION:   	0.0.1
+ */
+
+ /*Navbar dropdown hover to click*/
+ul.nav li.dropdown:hover > ul.dropdown-menu{
+    display: block;
+    margin: 0;
+}
+
+/* set fontsize for table headers */
+.table th {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+/* I need smaller text in tables. */
+.table td {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+/* Captions were tiny, I made them bigger. */
+.table caption {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+/* Table Hover wasn't dark enough.  I made it a little darker.  Originally f9f9f9. */
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: #f0f0f0;
+}
+
+/* Table Hover wasn't dark enough.  I made it a little darker.  Originally f5f5f5. */
+.table-hover tbody tr:hover > td,
+.table-hover tbody tr:hover > th {
+  background-color: #eaf4ff;
+}
+
+/* Puts an outline around a table */
+.table-outsideborder {
+	outline:2px solid #006dcc;
+}
+
+/* Applied to a row this makes the header row dark. */
+.table-darkheader tr > th {
+	background-color:#006dcc;
+	color:#FFFFFF;
+}
+
+/* Wanted to change gradient from gray to blue.*/
+.navbar-fixed-top {
+  background-color: #fafafa;
+  background-image: -moz-linear-gradient(top, #ffffff, #c0c0c0);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#c0c0c0));
+  background-image: -webkit-linear-gradient(top, #ffffff, #c0c0c0);
+  background-image: -o-linear-gradient(top, #ffffff, #c0c0c0);
+  background-image: linear-gradient(to bottom, #ffffff, #c0c0c0);
+  background-repeat: repeat-x;
+  border: 1px solid #d4d4d4;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffc0c0c0', GradientType=0);
+  *zoom: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+}
+
+/* Navbar wasn't wide enough - default is like 940px */
+.navbar-inner .container {
+	width: 1300px;
+}
+
+.setFontCourier {
+	font-style: normal;
+	font-weight: 900;
+	font-family: "Courier New", monospace;
+}
+
+
+
+.padtop20 {
+	padding-top: 20px;
+}
+
+
+.modalwide {
+	width: 800px;
+}
+
+.modal-body-scroll {
+  position: relative;
+  padding: 15px;
+  max-height: 420px;
+  overflow-y: auto;  
+}
+
+
+
+/* Django error class is always 'errorlist' */
+.errorlist {
+	font-weight: bold;
+	color: red;
+}
+
+.form-signin {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.form-signin-button {
+	margin-top: 10px;
+}
+
+.row-centered {
+    text-align:center;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+/* navtab standard widths*/
+.navtab-standard-width-small li {
+	width:100px;
+	text-align:center;
+}
+.navtab-standard-width-medium li {
+	width:140px;
+	text-align:center;
+}
+.navtab-standard-width-large li {
+	width:180px;
+	text-align:center;
+}
+.custom-width-medium li {
+	width:180px;
+	text-align:left;
+}
+
+
+
+/* panel */
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: inherit;
+}
+
+.panel-footer {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  font-size: 12px;
+}
+
+
+/* submenus */
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top:0;
+    left:100%;
+    margin-top:-6px;
+    margin-left:-1px;
+    -webkit-border-radius:0 6px 6px 6px;
+    -moz-border-radius:0 6px 6px 6px;
+    border-radius:0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+    display:block;
+}
+.dropdown-submenu>a:after {
+    display:block;
+    content:" ";
+    float:right;
+    width:0;
+    height:0;
+    border-color:transparent;
+    border-style:solid;
+    border-width:5px 0 5px 5px;
+    border-left-color:#cccccc;
+    margin-top:5px;
+    margin-right:-10px;
+}
+.dropdown-submenu:hover>a:after {
+    border-left-color:#ffffff;
+}
+.dropdown-submenu.pull-left {
+    float:none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left:-100%;
+    margin-left:10px;
+    -webkit-border-radius:6px 0 6px 6px;
+    -moz-border-radius:6px 0 6px 6px;
+    border-radius:6px 0 6px 6px;
+}
+
+.nav-justified li.dropdown.open .dropdown-menu{
+position:relative;
+top:auto;
+left:100;
+float:none;
+}
+
+
+/* Alignment */ 
+.align-middle > * {
+  vertical-align: middle;
+}
+
+.align-top > * {
+  vertical-align: top;
+}
+
+.align-bottom > * {
+  vertical-align: bottom;
+}
+
+.align-sub > * {
+  vertical-align: sub;
+}
+
+.align-super > * {
+  vertical-align: super;
+}
+
+.align-text-top > * {
+  vertical-align: text-top;
+}
+
+.align-text-bottom > * {
+  vertical-align: text-bottom;
+}
+
+.align-baseline > * {
+  vertical-align: baseline;
+}
+
+.align-pixel > * {
+  vertical-align: 30px;
+}
+
+.align-percentage > * {
+  vertical-align: -500%;
+}
+
+
+/* font stuff */ 
+.grayout {
+	font-style: italic;
+	color: #d0d0d0;
+}
+
+
+/* div stuff*/
+.outline_black {
+    -moz-box-shadow: 0 0 1px black;
+    -webkit-box-shadow: 0 0 1px black;
+    box-shadow: 0 0 1px black;
+}
+
+.outline_red {
+    -moz-box-shadow: 0 0 1px red;
+    -webkit-box-shadow: 0 0 1px red;
+    box-shadow: 0 0 1px red;
+}
+
+
+
+.border_bottom {
+	border-bottom: 1px solid #ccc;
+}
+
+
+
+.text_indent_sm {
+    text-indent: 25px;
+}
+
+.text_indent_md {
+    text-indent: 50px;
+}
+
+
+.table-header-rotated th.row-header{
+  width: auto;
+}
+
+.table-header-rotated td{
+  width: 40px;
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table-header-rotated th.rotate-45{
+  height: 80px;
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  position: relative;
+  vertical-align: bottom;
+  padding: 0;
+  font-size: 12px;
+  line-height: 0.8;
+}
+
+.table-header-rotated th.rotate-45 > div{
+  position: relative;
+  top: 0px;
+  left: 40px; /* 80 * tan(45) / 2 = 40 where 80 is the height on the cell and 45 is the transform angle*/
+  height: 100%;
+  -ms-transform:skew(-45deg,0deg);
+  -moz-transform:skew(-45deg,0deg);
+  -webkit-transform:skew(-45deg,0deg);
+  -o-transform:skew(-45deg,0deg);
+  transform:skew(-45deg,0deg);
+  overflow: hidden;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+}
+
+.table-header-rotated th.rotate-45 span {
+  -ms-transform:skew(45deg,0deg) rotate(315deg);
+  -moz-transform:skew(45deg,0deg) rotate(315deg);
+  -webkit-transform:skew(45deg,0deg) rotate(315deg);
+  -o-transform:skew(45deg,0deg) rotate(315deg);
+  transform:skew(45deg,0deg) rotate(315deg);
+  position: absolute;
+  bottom: 30px; /* 40 cos(45) = 28 with an additional 2px margin*/
+  left: -25px; /*Because it looked good, but there is probably a mathematical link here as well*/
+  display: inline-block;
+  // width: 100%;
+  width: 85px; /* 80 / cos(45) - 40 cos (45) = 85 where 80 is the height of the cell, 40 the width of the cell and 45 the transform angle*/
+  text-align: left;
+  // white-space: nowrap; /*whether to display in one line or not*/
+}
+
